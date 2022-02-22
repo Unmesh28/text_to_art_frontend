@@ -15,7 +15,7 @@ document.getElementById("name").innerHTML = name1;
 document.getElementById("prompts").innerHTML = prompts;
 var imageId = document.getElementById("photo")
 imageId.src = imageObjectUrl;
-fetch('http://3.110.111.44:8000/getVideo', {
+fetch('http://3.110.60.43:8000/getVideo', {
     method: 'GET',
     }).then(response => {
         // handle the response
@@ -29,6 +29,7 @@ fetch('http://3.110.111.44:8000/getVideo', {
         const imageObjectURL = URL.createObjectURL(imageBlob);
         console.log(imageObjectURL);
         var imageId = document.getElementById("video")
+        document.getElementById("video").controls = false;
         //document.getElementById('spin').style.display = 'none';
         imageId.src = imageObjectURL
     })

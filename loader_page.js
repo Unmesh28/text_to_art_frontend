@@ -1,11 +1,9 @@
 console.log('inside loader')
 var name = sessionStorage.getItem("name")
 var prompts = sessionStorage.getItem("prompts")
-var style = sessionStorage.getItem("style")
 
 var details = {
-    'prompts' : prompts + ' ' + style,
-    'style' : style,
+    'prompts' : prompts ,
     'make_video' : true
 }
 
@@ -17,7 +15,7 @@ formBody.push(encodedKey + "=" + encodedValue);
 }   
 formBody = formBody.join("&");
 
-fetch('http://3.110.111.44:8000/generate', {
+fetch('http://3.110.60.43:8000/generate', {
 method: 'POST',
 headers: {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
