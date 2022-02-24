@@ -3,19 +3,22 @@ var name1 = sessionStorage.getItem("name")
 var prompts = sessionStorage.getItem("prompts")
 var imageObject = sessionStorage.getItem("imageObject")
 var imageObjectUrl = sessionStorage.getItem("imageObjectUrl")
+var style = sessionStorage.getItem("style")
 
-
+console.log(style)
 
 console.log(name1)
 console.log(prompts)
 console.log(imageObject)
 console.log(imageObjectUrl)
 
+
 document.getElementById("name").innerHTML = name1;
 document.getElementById("prompts").innerHTML = prompts;
+document.getElementById("style").innerHTML = style;
 var imageId = document.getElementById("photo")
 imageId.src = imageObjectUrl;
-fetch('http://3.110.60.43:8000/getVideo', {
+fetch('http://3.110.140.204:8000/getVideo', {
     method: 'GET',
     }).then(response => {
         // handle the response

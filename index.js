@@ -9,8 +9,8 @@ function namePressEnter(e) {
 
     //alert("Enter was pressed was presses");
     document.getElementById("prompt_input").style.display = "block";
+    document.getElementById("prompts").focus();
 }}
-  
 
 function generateImageVideo(e) {
   if(e.keyCode === 13){
@@ -30,7 +30,6 @@ function generateImageVideo(e) {
     console.log(prompts);
 
     window.open("loader_page.html", "_self");
-
   }
 }
 
