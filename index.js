@@ -15,13 +15,10 @@ function namePressEnter(e) {
 function generateImageVideo(e) {
   if(e.keyCode === 13){
     console.log("Called..........")
-    
-    
     //document.getElementById('spinner').style.display = 'block';
 
     // var x = document.getElementById("myForm").elements.length;
     // console.log(x)
-    
     var name = document.getElementById("name").value;
     var prompts = document.getElementById("prompts").value;
     sessionStorage.setItem("prompts", prompts);
